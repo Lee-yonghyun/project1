@@ -28,6 +28,20 @@ class App extends Component {
     ],
   };
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        movies: [
+          {
+            title: "Trainspotting",
+            poster:
+              "https://resizing.flixster.com/OUEArjor-MbyCV6GqLU85Hk9jQI=/300x300/v1.bjs1NTQ3OTM7ajsxNzQ2NjsxMjAwOzIwMDA7MTMzMQ",
+          },
+          ...this.state.movies,
+        ],
+      });
+    }, 3000);
+  }
   render() {
     const { movies, greeting } = this.state;
 
